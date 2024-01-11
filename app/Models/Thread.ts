@@ -24,7 +24,7 @@ export default class Thread extends BaseModel {
 
   @column.dateTime({ autoCreate: true, autoUpdate: true })
   public updatedAt: DateTime
-  
+
   @belongsTo(() => User)
   public user: BelongsTo<typeof User>
 
