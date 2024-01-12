@@ -29,7 +29,7 @@ export default class User extends BaseModel {
   public threads: HasMany<typeof Thread>
 
   @beforeSave()
-  public static async hashPassword (user: User) {
+  public static async hashPassword(user: User) {
     if (user.$dirty.password) {
       user.password = await Hash.make(user.password)
     }
