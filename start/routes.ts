@@ -29,4 +29,5 @@ Route.group(() => {
   Route.post('/auth/login', 'AuthController.login')
 
   Route.post('/threads', 'ThreadsController.store').middleware('auth')
+  Route.get('/threads/:id', 'ThreadsController.show')
 }).prefix('/api')
