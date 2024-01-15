@@ -3,6 +3,19 @@ import Thread from 'App/Models/Thread'
 import ThreadValidator from 'App/Validators/ThreadValidator'
 
 export default class ThreadsController {
+  public async index({ response }: HttpContextContract) {
+    try {
+      const threads = await Thread.query().preload('category').preload('user')
+      return response.status(200).json({
+        data: threads,
+      })
+    } catch (error) {
+      return response.status(400).json({
+        message: error.message,
+      })
+    }
+  }
+
   public async store({ request, auth, response }: HttpContextContract) {
     const validateData = await request.validate(ThreadValidator)
 
