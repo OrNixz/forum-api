@@ -5,7 +5,7 @@ import ThreadValidator from 'App/Validators/ThreadValidator'
 export default class ThreadsController {
   public async index({ response }: HttpContextContract) {
     try {
-      const threads = await Thread.query().preload('category').preload('user')
+      const threads = await Thread.query().preload('category').preload('user').preload('replies')
       return response.status(200).json({
         data: threads,
       })
@@ -41,6 +41,7 @@ export default class ThreadsController {
         .where('id', params.id)
         .preload('category')
         .preload('user')
+        .preload('replies')
         .firstOrFail()
       return response.status(200).json({
         data: thread,
@@ -59,7 +60,7 @@ export default class ThreadsController {
 
       if (user?.id !== thread.userId) {
         return response.status(401).json({
-          message: 'You are not authorized to do this action'
+          message: 'You are not authorized to do this action',
         })
       }
 
@@ -87,7 +88,7 @@ export default class ThreadsController {
 
       if (user?.id !== thread.userId) {
         return response.status(401).json({
-          message: 'You are not authorized to do this action'
+          message: 'You are not authorized to do this action',
         })
       }
 
