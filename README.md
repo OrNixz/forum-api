@@ -1,6 +1,6 @@
 ## Description
 
-The Forum-API is an Adonis JS backend project provided by Codepolitan to complement the "Learn to Build RESTful with AdonisJS" course. It provides a collection of APIs designed to manage users, categories, threads, and replies
+The Forum-API is an Adonis JS backend project provided by Codepolitan to complement the "Learn to Build RESTful with AdonisJS" course. It provides a collection of APIs designed to manage users, categories, threads, and replies.
 
 
 ## Features
