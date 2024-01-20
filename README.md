@@ -55,7 +55,7 @@ The application will usually run at `http://localhost:3333`.
 |:--------:|:------:|:-------------------------------:|:----------------------------------------------------------:|
 | register | POST   | /api/auth/register              | Creates a new user and returns an authentication token.    |
 | login    | POST   | /api/auth/login                 | Validates credentials and returns an authentication token. |
-| thrad    | GET    | /api/threads                    | Retrieve a list of all threads.                            |
+| thread   | GET    | /api/threads                    | Retrieve a list of all threads.                            |
 | thread   | POST   | /api/threads                    | Create a new thread.                                       |
 | thread   | PUT    | /api/threads/:id                | Update an existing thread.                                 |
 | thread   | DELETE | /api/threads/:id                | Delete a thread                                            |
