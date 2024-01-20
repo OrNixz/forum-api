@@ -1,9 +1,9 @@
-## Description
+## 1. Description
 
 The Forum-API is an Adonis JS backend project provided by Codepolitan to complement the "Learn to Build RESTful with AdonisJS" course. It provides a collection of APIs designed to manage users, categories, threads, and replies.
 
 
-## Features
+## 2. Features
 
 - User Registration and Login
 - Token-based authentication
@@ -11,7 +11,7 @@ The Forum-API is an Adonis JS backend project provided by Codepolitan to complem
 - Thread Managament
 - Reply Posting to threads
 
-## Technologies Used
+## 3. Technologies Used
 
 1. Adonis JS
 2. MySQL
@@ -19,7 +19,7 @@ The Forum-API is an Adonis JS backend project provided by Codepolitan to complem
 4. Yarn
 5. Postman
 
-## Getting Started
+## 4. Getting Started
 
 To install this project, you will need to have on your machine :
 1. Node.js
@@ -32,6 +32,7 @@ After that, follow this steps:
 https://github.com/OrNixz/forum-api.git
 ```
 or you can download it manually.
+
 2. Install dependencies:
 ```
 cd forum-api
@@ -48,7 +49,7 @@ node ace serve --watch
 ```
 The application will usually run at `http://localhost:3333`.
 
-## API Endpoints
+## 5. API Endpoints
 
 |   Name   | Method |               URL               |                         Description                        |
 |:--------:|:------:|:-------------------------------:|:----------------------------------------------------------:|
@@ -60,7 +61,7 @@ The application will usually run at `http://localhost:3333`.
 | thread   | DELETE | /api/threads/:id                | Delete a thread                                            |
 | reply    | POST   | /api/threads/:thread_id/replies | Post a new reply to a thread.                              |
 
-## Screenshots
+## 6. Screenshots
 
 1. Register
 
